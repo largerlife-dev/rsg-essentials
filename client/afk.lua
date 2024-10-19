@@ -45,7 +45,7 @@ RegisterNetEvent('RSGCore:Client:OnPermissionUpdate', function()
 end)
 
 CreateThread(function()
-    while true do
+    while Config.EnableAfk do
         Wait(1000)
         local playerPed = PlayerPedId()
         if isLoggedIn then
@@ -57,9 +57,21 @@ CreateThread(function()
                             if time > 0 then
                                 local _type = timeMinutes[tostring(time)]
                                 if _type == 'minutes' then
-                                    lib.notify({ title = Lang:t('afk.will_kick'), description = math.ceil(time / 60) .. Lang:t('afk.time_seconds'), type = 'error', duration = 5000 })
+                                    lib.notify({
+                                        title = Lang:t('afk.will_kick'),
+                                        description = math.ceil(time / 60) ..
+                                            Lang:t('afk.time_seconds'),
+                                        type = 'error',
+                                        duration = 5000
+                                    })
                                 elseif _type == 'seconds' then
-                                    lib.notify({ title = Lang:t('afk.will_kick'), description = time .. Lang:t('afk.time_seconds'), type = 'error', duration = 5000 })
+                                    lib.notify({
+                                        title = Lang:t('afk.will_kick'),
+                                        description = time ..
+                                            Lang:t('afk.time_seconds'),
+                                        type = 'error',
+                                        duration = 5000
+                                    })
                                 end
                                 time -= 1
                             else

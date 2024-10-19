@@ -17,6 +17,9 @@ Config.StopAutoShuffle = true
 --can players fill the canteen from a water pump
 Config.canteenPump = true
 
+-- warn and kick when afk
+Config.EnableAfk = false
+
 -- Go to Discord Developers Portal (https://discord.com/developers)
 
 Config.Discord = {
