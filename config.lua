@@ -45,23 +45,23 @@ Config.DiscordWHAuthorName = 'Rexshack Gaming'
 -- density config
 Config.Density = {
     -- Ambient Animal Density
-    [1] = 1.0,
+    [1] = 1.8,
     -- Scenario Animal Density
-    [2] = 1.0,
+    [2] = 1.8,
     -- Ambient Human Density
-    [3] = 1.0,
+    [3] = 0.4,
     -- Scenario Human Density
-    [4] = 1.0,
+    [4] = 0.4,
     -- Ambient Ped Density
-    [5] = 1.0,
+    [5] = 0.4,
     -- Scenario Ped Density
-    [6] = 1.0,
+    [6] = 0.4,
     -- Parked Vehicle Density
     [7] = 0.0,
     -- Random Vehicle Density
-    [8] = 0.0,
+    [8] = 0.2,
     -- Vehicle Density
-    [9] = 0.0,
+    [9] = 0.2,
 }
 
 -- water types config
